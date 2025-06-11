@@ -1,9 +1,9 @@
-// File: src/components/Layout.js
+// File: src/components/Layout.jsx
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/Layout.css';
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <div className="app-container">
       <header className="app-header">
@@ -15,7 +15,7 @@ export default function Layout() {
         </nav>
       </header>
       <main className="app-main">
-        <Outlet />
+        {children}   {/* 여기를 Outlet() 대신 children으로 */}
       </main>
       <footer className="app-footer">© 2025 Fitness App</footer>
     </div>
